@@ -163,6 +163,8 @@ figure:hover figcaption {
 }
 
 footer {
+	margin-top: calc(var(--gap)/-2);
+	padding-bottom: calc(var(--gap)/2);
 	text-align: center;
 }
 
