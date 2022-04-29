@@ -215,7 +215,7 @@ section {
 	padding: 0.5em;
 	position: fixed;
 	right: 1.5rem;
-	transform: translateY(150%);
+	transform: translateY(calc(100% + 1.5rem + 32px));
 	transition: var(--transition);
 	z-index: 100
 }
