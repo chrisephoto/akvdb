@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   loadData();
   loadTheme();
-	eventListeners();
+  eventListeners();
 });
 
 window.addEventListener("scroll", () => {
