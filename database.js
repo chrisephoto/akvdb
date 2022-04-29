@@ -4,6 +4,10 @@ database = [
     image: "https://img1.ak.crunchyroll.com/i/spire1/a0f45608c4e4f48c89936055c0dbdb601651150200_main.jpg"
   },
   {
+    title: "MF Ghost",
+    image: "https://m.imageimg.net/upload/artist_img/MFGST-OFCL-0001/12aa1def131e9435519c4147ed52125a16d174ef_61c96ed270469.jpg"
+  },
+  {
     title: "Attack on Titan: The Final Season",
     image: "https://s1.zerochan.net/Attack.on.Titan.600.1417657.jpg"
   },
