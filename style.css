@@ -283,6 +283,7 @@ section {
 	color: var(--color-3);
 	cursor: pointer;
 	text-align: center;
+	transition: var(--transition);
 	vertical-align: middle;
 	width: 3rem;
 }
