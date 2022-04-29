@@ -273,15 +273,18 @@ section {
 }
 
 .icon {
-  color: var(--color-3);
-  cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
-  width: 3rem;
+	color: var(--color-3);
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	width: 3rem;
 }
 
 .page-width {
+	box-sizing: border-box;
 	margin: 0 auto;
-	width: 80%;
+	padding-left: var(--gap);
+	padding-right: var(--gap);
+	width: 100%;
 	max-width: 80rem;
 }
