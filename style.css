@@ -1,0 +1,296 @@
+/* WIP */
+figure {
+	margin: 0;
+	position: relative;
+}
+
+figcaption {
+	align-items: center;
+	background: var(--color-2); //5
+	color: var(--color-3); //6
+	display: flex;
+	justify-content: center;
+	padding: 1em;
+	pointer-events: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	transform: translateY(100%);
+	transition: var(--transition);
+	z-index: 50;
+}
+
+figure:hover figcaption {
+	transform: translateY(0%);
+}
+
+/* variables */
+:root {
+	--accent-color: #808080;
+	--border-radius: 5px;
+	--font-family-body: 'Poppins', sans-serif;
+	--font-family-heading: 'Poppins', sans-serif;
+	--gap: 3rem;
+	--thumbnail-ratio: 0.71;
+	--thumbnail-size: 128px;
+	--transition: 0.2s;
+}
+
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* themes */
+.theme-colorful {
+	--box-shadow: 0 0 32px rgba(0,0,0,0.5);
+	--color-1: #1f0f0e; /* main background */
+	--color-2: var(--accent-color); /* alternate background*/
+	--color-3: #ffffff; /* heading text */
+	--color-4: #eeeeee; /* body text */
+	--color-5: var(--accent-color); /* primary accent */
+	--color-6: #ffffff; /* color on primary accent */
+}
+
+.theme-dark {
+	--box-shadow: 0 0 32px rgba(0,0,0,0.5);
+	--color-1: #0b1622; /* main background */
+	--color-2: #152232; /* alternate background*/
+	--color-3: #ffffff; /* heading text */
+	--color-4: #eeeeee; /* body text */
+	--color-5: var(--accent-color); /* primary accent */
+	--color-6: #ffffff; /* color on primary accent */
+}
+
+.theme-light {
+	--box-shadow: 0 0 32px rgba(0,0,0,0.25);
+	--color-1: #f5f5f5; /* main background */
+	--color-2: #f5f5f5; /* alternate background*/
+	--color-3: #212121; /* heading text */
+	--color-4: #424242; /* body text */
+	--color-5: var(--accent-color); /* primary accent */
+	--color-6: #ffffff; /* color on primary accent */
+}
+
+.theme-oled {
+	--box-shadow: 0 0 0px rgba(0,0,0,0.0);
+	--color-1: #000000; /* main background */
+	--color-2: #000000; /* alternate background*/
+	--color-3: #c0c0c0; /* heading text */
+	--color-4: #989898; /* body text */
+	--color-5: var(--accent-color); /* primary accent */
+	--color-6: #ffffff; /* color on primary accent */
+}
+
+.theme-contrast {
+	--box-shadow: 0 0 0 0px rgba(0,0,0,0.0);
+	--color-1: #ffffff; /* main background */
+	--color-2: #ffffff; /* alternate background*/
+	--color-3: #000000; /* heading text */
+	--color-4: #000000; /* body text */
+	--color-5: #000000; /* primary accent */
+	--color-6: #ffffff; /* color on primary accent */
+}
+
+.theme-oled dialog {
+	box-shadow: 0 0 0 2px var(--color-5) inset, 0 0 100vw 100vw rgba(0,0,0,0.8);
+}
+
+.theme-oled header {
+	box-shadow: 0 2px 0 var(--color-5);
+}
+
+.theme-contrast header {
+	box-shadow: 0 2px 0 var(--color-3);
+}
+
+/* typography */
+a {
+	color: var(--color-5);
+	font-family: var(--font-family-body);
+}
+
+button,
+input {
+	font-family: var(--font-family-body);
+	font-weight: bold;
+}
+
+caption,
+label,
+li,
+p,
+span,
+td,
+th {
+	color: var(--color-4);
+	font-family: var(--font-family-body);
+}
+
+figcaption {
+	font-family: var(--font-family-body);
+	font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-3);
+	font-family: var(--font-family-heading);
+}
+
+body {
+	background: var(--color-1);
+	margin: 0;
+}
+
+dialog {
+	background: var(--color-1);
+	border: none;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow), 0 0 0 100vw rgba(0,0,0,0.8);
+	left: 50%;
+	margin: 0;
+	padding: var(--gap);
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 150;
+}
+
+footer {
+	text-align: center;
+}
+
+header {
+	background: var(--color-2);
+	box-shadow: var(--box-shadow);
+	padding: calc(var(--gap)/2) 0;
+}
+
+input[type=search],
+input[type=text] {
+	background: transparent;
+	border-radius: var(--border-radius);
+	border: none;
+	box-shadow: 0 0 0 2px var(--color-5) inset;
+	color: var(--color-3);
+	cursor: pointer;
+	padding: 0.75em 1.25em;
+}
+
+label {
+	padding-right:0.5em;
+}
+
+main {
+	padding: calc(var(--gap)/2) 0;
+}
+
+section {
+	padding: calc(var(--gap)/2) 0;
+}
+
+#filter {
+	text-align: center;
+	width: 100%;
+}
+
+#settings-button {
+	background: var(--color-5);
+	border-radius: 1000px;
+	box-shadow: var(--box-shadow);
+	color: var(--color-6);
+	cursor: pointer;
+	padding: 0.5em;
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	z-index: 100
+}
+
+#top-button {
+	background: var(--color-5);
+	border-radius: 1000px;
+	bottom: -2em;
+	box-shadow: var(--box-shadow);
+	color: var(--color-6);
+	cursor: pointer;
+	padding: 0.5em;
+	position: fixed;
+	right: 1em;
+	transition: var(--transition);
+	z-index: 100
+}
+
+#top-button.visible {
+	bottom: 1em;
+}
+
+.button-1,
+.button-2,
+.button-3 {
+	border-radius: var(--border-radius);
+	border: none;
+	padding: 0.75em 1.25em;
+}
+
+/* primary button - CTA */
+.button-1 {
+	background: var(--color-5);
+	box-shadow: var(--box-shadow);
+	color: var(--color-6);
+	cursor: pointer;
+}
+
+/* secondary button */
+.button-2 {
+	background: transparent;
+	box-shadow: 0 0 0 2px var(--color-5) inset;
+	color: var(--color-5);
+	cursor: pointer;
+}
+
+/* disabled button */
+.button-3 {
+	background: transparent;
+	box-shadow: 0 0 0 2px var(--color-3) inset;
+	color: var(--color-3);
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.card {
+	background: var(--color-1);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	overflow: hidden;
+	width: 100%;
+}
+
+.card img {
+	aspect-ratio: var(--thumbnail-ratio);
+	display: block;
+	object-fit: cover;
+	width: 100%;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: var(--gap);
+}
+
+.hidden {
+	display: none;
+}
+
+.page-width {
+	margin: 0 auto;
+	width: 80%;
+	max-width: 80rem;
+}
