@@ -197,7 +197,7 @@ section {
 
 #filter {
 	text-align: center;
-	width: 100%;
+	width: calc(100% - 6em);
 }
 
 #top-button {
@@ -278,8 +278,10 @@ section {
 
 .icon {
   color: var(--color-6);
-	cursor: pointer;
-  vertical-align: center;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  width: 3em;
 }
 
 .page-width {
