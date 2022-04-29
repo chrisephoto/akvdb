@@ -101,7 +101,7 @@ th {
 }
 
 figcaption {
-	color: var(--color-3); /*6*/
+	color: var(--color-6);
 	font-family: var(--font-family-body);
 	font-weight: bold;
 	text-align: center;
@@ -144,7 +144,7 @@ figure {
 
 figcaption {
 	align-items: center;
-	background: var(--color-2); /*5*/
+	background: var(--color-5);
 	display: flex;
 	justify-content: center;
 	padding: 1em;
@@ -177,10 +177,15 @@ input[type=text] {
 	background: transparent;
 	border-radius: var(--border-radius);
 	border: none;
-	box-shadow: 0 0 0 2px var(--color-5) inset;
-	color: var(--color-3);
+	box-shadow: 0 0 0 2px var(--color-3) inset;
+	color: var(--color-4);
 	cursor: pointer;
 	padding: 0.75em 1.25em;
+}
+
+input[type=search]:focus,
+input[type=text]:focus {
+	box-shadow: 0 0 0 2px var(--color-5) inset;
 }
 
 main {
@@ -199,19 +204,20 @@ section {
 #top-button {
 	background: var(--color-5);
 	border-radius: 1000px;
-	bottom: -2em;
+	bottom: 1.5rem;
 	box-shadow: var(--box-shadow);
 	color: var(--color-6);
 	cursor: pointer;
 	padding: 0.5em;
 	position: fixed;
-	right: 1em;
+	right: 1.5rem;
+	transform: translateY(150%);
 	transition: var(--transition);
 	z-index: 100
 }
 
 #top-button.visible {
-	bottom: 1em;
+	transform: translateY(0);
 }
 
 .button-1,
@@ -278,6 +284,10 @@ section {
 	text-align: center;
 	vertical-align: middle;
 	width: 3rem;
+}
+
+.icon:hover {
+	color: var(--color-5);
 }
 
 .page-width {
