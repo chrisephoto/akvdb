@@ -30,7 +30,7 @@ function loadTheme() {
   a = localStorage.getItem("theme");
   if (a) {
     document.querySelector("body").className = a;
-    document.querySelector("input[type=radio][name=theme-radio][value=" + a + "]").checked = true;
+    document.querySelector("input[type=radio][name=theme-radio][value='" + a + "']").checked = true;
   } else {
     localStorage.setItem("theme", "theme-light"); //set default theme
     loadTheme();
@@ -38,7 +38,7 @@ function loadTheme() {
   b = localStorage.getItem("accent");
   if (b) {
     document.querySelector(":root").style.setProperty("--accent-color", "#" + b);
-    document.querySelector("input[type=radio][name=accent-radio][value=" + b + "]").checked = true;
+    document.querySelector("input[type=radio][name=accent-radio][value='" + b + "']").checked = true;
   } else {
     localStorage.setItem("accent", "dd191d"); //set default accent
     loadTheme();
