@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
   loadData();
   loadTheme();
+	eventListeners();
 });
 
 window.addEventListener("scroll", () => {
@@ -44,6 +45,46 @@ function loadTheme() {
   }
 }
 
+function eventListeners() {
+  a = document.querySelectorAll("input[type=radio][name=theme-radio]");
+  Array.prototype.forEach.call(a, function(radio) {
+    radio.addEventListener("change", function() {
+      localStorage.setItem("theme", radio.value);
+  	  loadTheme();
+    });
+  });
+
+  b = document.querySelectorAll("input[type=radio][name=accent-radio]");
+  Array.prototype.forEach.call(b, function(radio) {
+    radio.addEventListener("change", function() {
+      localStorage.setItem("accent", radio.value);
+      loadTheme();
+    });
+  });
+
+  document.getElementById("settings-button").addEventListener("click", function() {
+    document.getElementById("settings").open = true;
+  });
+
+  d = document.getElementById("filter");
+  d.addEventListener("input", function filter() {
+    var filter, ul, li, a, i, txtValue;
+    filter = d.value.toUpperCase();
+    figures = document.querySelectorAll("figure");
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < figures.length; i++) {
+      figcaption = figures[i].getElementsByTagName("figcaption")[0];
+      txtValue = figcaption.textContent || figcaption.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        figures[i].style.display = "";
+      } else {
+        figures[i].style.display = "none";
+      }
+    }
+  });
+}
+
 function scrollEffects() {
   a = document.getElementById("top").getBoundingClientRect().top;
   if (a < -32) {
@@ -52,41 +93,3 @@ function scrollEffects() {
     document.getElementById("top-button").classList.remove("visible")
   }
 }
-
-a = document.querySelectorAll("input[type=radio][name=theme-radio]");
-Array.prototype.forEach.call(a, function(radio) {
-  radio.addEventListener("change", function() {
-    localStorage.setItem("theme", radio.value);
-	  loadTheme();
-  });
-});
-
-b = document.querySelectorAll("input[type=radio][name=accent-radio]");
-Array.prototype.forEach.call(b, function(radio) {
-  radio.addEventListener("change", function() {
-    localStorage.setItem("accent", radio.value);
-    loadTheme();
-  });
-});
-
-document.getElementById("settings-button").addEventListener("click", function() {
-  document.getElementById("settings").open = true;
-});
-
-d = document.getElementById("filter");
-d.addEventListener("input", function filter() {
-  var filter, ul, li, a, i, txtValue;
-  filter = d.value.toUpperCase();
-  figures = document.querySelectorAll("figure");
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < figures.length; i++) {
-    figcaption = figures[i].getElementsByTagName("figcaption")[0];
-    txtValue = figcaption.textContent || figcaption.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      figures[i].style.display = "";
-    } else {
-      figures[i].style.display = "none";
-    }
-  }
-});
