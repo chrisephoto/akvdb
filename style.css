@@ -183,10 +183,6 @@ input[type=text] {
 	padding: 0.75em 1.25em;
 }
 
-label {
-	padding-right:0.5em;
-}
-
 main {
 	padding: calc(var(--gap)/2) 0;
 }
@@ -197,7 +193,7 @@ section {
 
 #filter {
 	text-align: center;
-	width: calc(100% - 6em);
+	width: calc(100% - 6rem);
 }
 
 #top-button {
@@ -281,7 +277,7 @@ section {
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  width: 3em;
+  width: 3rem;
 }
 
 .page-width {
