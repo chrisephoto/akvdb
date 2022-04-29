@@ -200,19 +200,6 @@ section {
 	width: 100%;
 }
 
-#settings-button {
-	background: var(--color-5);
-	border-radius: 1000px;
-	box-shadow: var(--box-shadow);
-	color: var(--color-6);
-	cursor: pointer;
-	padding: 0.5em;
-	position: fixed;
-	top: 1em;
-	right: 1em;
-	z-index: 100
-}
-
 #top-button {
 	background: var(--color-5);
 	border-radius: 1000px;
@@ -287,6 +274,12 @@ section {
 
 .hidden {
 	display: none;
+}
+
+.icon {
+  color: var(--color-6);
+	cursor: pointer;
+  vertical-align: center;
 }
 
 .page-width {
