@@ -145,6 +145,7 @@ figure {
 figcaption {
 	align-items: center;
 	background: var(--color-5);
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
 	display: flex;
 	justify-content: center;
 	padding: 1em;
@@ -177,7 +178,7 @@ header {
 input[type=search],
 input[type=text] {
 	background: transparent;
-	border-radius: var(--border-radius);
+	border-radius: 1000px; /* var(--border-radius) */
 	border: none;
 	box-shadow: 0 0 0 2px var(--color-3) inset;
 	color: var(--color-4);
