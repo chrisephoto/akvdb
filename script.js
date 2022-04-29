@@ -71,7 +71,7 @@ Array.prototype.forEach.call(b, function(radio) {
 
 document.getElementById("settings-button").addEventListener("click", function() {
   document.getElementById("settings").open = true;
-}
+});
 
 d = document.getElementById("filter");
 d.addEventListener("input", function filter() {
@@ -89,4 +89,4 @@ d.addEventListener("input", function filter() {
       figures[i].style.display = "none";
     }
   }
-}, false);
+});
