@@ -180,6 +180,7 @@ input[type=text] {
 	box-shadow: 0 0 0 2px var(--color-3) inset;
 	color: var(--color-4);
 	cursor: pointer;
+	outline: none;
 	padding: 0.75em 1.25em;
 }
 
@@ -198,7 +199,7 @@ section {
 
 #filter {
 	text-align: center;
-	width: calc(100% - 6rem);
+	/*width: calc(100% - 6rem);*/
 }
 
 #top-button {
