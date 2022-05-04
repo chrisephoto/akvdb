@@ -1,7 +1,11 @@
 database = [
   {
+    title: "SPY x FAMILY",
+    image: "images/spy-x-family.jpg"
+  },
+  {
     title: "Sailor Moon R the Movie: Promise of the Rose",
-    image: "https://img1.ak.crunchyroll.com/i/spire1/a0f45608c4e4f48c89936055c0dbdb601651150200_main.jpg"
+    image: "images/sailor-moon-r.jpg"
   },
   {
     title: "MF Ghost",
