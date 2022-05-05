@@ -71,12 +71,12 @@ function eventListeners() {
     });
   });
   
-  document.getElementById("information-button").addEventListener("click", function() {
-    document.getElementById("information").open = true;
+  document.getElementById("button-info").addEventListener("click", function() {
+    document.getElementById("dialog-info").open = true;
   });
 
-  document.getElementById("settings-button").addEventListener("click", function() {
-    document.getElementById("settings").open = true;
+  document.getElementById("button-settings").addEventListener("click", function() {
+    document.getElementById("dialog-settings").open = true;
   });
 
   d = document.getElementById("filter");
