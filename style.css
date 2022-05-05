@@ -175,6 +175,12 @@ header {
 	padding: calc(var(--gap)/2) 0;
 }
 
+header > div {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
 input[type=search],
 input[type=text] {
 	background: transparent;
