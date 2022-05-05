@@ -1,5 +1,9 @@
 database = [
   {
+    title: "The Quintessential Quintuplets the Movie",
+    image: "images/quintessential-quintuplets.jpg"
+  },
+  {
     title: "SPY x FAMILY",
     image: "images/spy-x-family.jpg"
   },
