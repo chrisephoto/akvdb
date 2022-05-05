@@ -63,7 +63,12 @@ function eventListeners() {
   });
   
   document.getElementById("top-button").addEventListener("click", function() {
-    window.scrollTop = "0";
+    console.log("clicked");
+    window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
   });
   
   document.getElementById("information-button").addEventListener("click", function() {
