@@ -62,6 +62,10 @@ function eventListeners() {
     });
   });
   
+  document.getElementById("top-button").addEventListener("click", function() {
+    window.scrollTop = "0";
+  });
+  
   document.getElementById("information-button").addEventListener("click", function() {
     document.getElementById("information").open = true;
   });
