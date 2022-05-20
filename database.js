@@ -1,5 +1,9 @@
 database = [
   {
+    title: "Urusei Yatsura",
+    image: "images/urusei-yatsura.jpg"
+  },
+  {
     title: "The Quintessential Quintuplets the Movie",
     image: "images/quintessential-quintuplets.jpg"
   },
