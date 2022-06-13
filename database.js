@@ -1,5 +1,9 @@
 database = [
   {
+    title: "Dr Stone: Ryusui",
+    image: "images/dr-stone-ryusui.jpg"
+  },
+  {
     title: "Urusei Yatsura",
     image: "images/urusei-yatsura.jpg"
   },
